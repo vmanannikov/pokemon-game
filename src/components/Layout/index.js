@@ -1,7 +1,6 @@
 import s from './style.module.css';
-import * as url from "url";
 
-const Layout = ({title, descr, urlBg = false, colorBg = false}) =>{
+const Layout = ({title, urlBg = false, colorBg = false, children}) =>{
     const styleRoot = {
         backgroundColor: colorBg,
         backgroundImage: `url(${urlBg})`
@@ -16,9 +15,9 @@ const Layout = ({title, descr, urlBg = false, colorBg = false}) =>{
                         </h3>
                         <span className={s.separator}></span>
                     </div>
-                    <div className={s.desc}>
+                    <div className={`${s.desc} ${s.full}`}>
                         <p>
-                            {descr}
+                            {children}
                         </p>
                     </div>
                 </article>
