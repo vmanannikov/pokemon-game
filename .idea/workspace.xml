@@ -30,22 +30,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/PokemonCard/assets" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,12 +48,16 @@
       <option name="presentableId" value="Default" />
       <updated>1615317194347</updated>
       <workItem from="1615317199268" duration="76000" />
-      <workItem from="1615399505372" duration="18193000" />
-      <workItem from="1615474609842" duration="395000" />
-      <workItem from="1615539800883" duration="346000" />
-      <workItem from="1615663002488" duration="14192000" />
-      <workItem from="1615683250396" duration="401000" />
+      <workItem from="1615399505372" duration="17784000" />
     </task>
+    <task id="LOCAL-00001" summary="PG HW3 Commit">
+      <created>1615683952829</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615683952829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,5 +74,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Больше проблем с Github Desktop" />
+    <MESSAGE value="PG HW3 Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="PG HW3 Commit" />
   </component>
 </project>
