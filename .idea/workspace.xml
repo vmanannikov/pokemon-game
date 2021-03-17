@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4af02b9f-944d-4fc3-8de8-f118cf354147" name="Default Changelist" comment="" />
+    <list default="true" id="4af02b9f-944d-4fc3-8de8-f118cf354147" name="Default Changelist" comment="fixup! PG HW3 Commit">
+      <change afterPath="$PROJECT_DIR$/src/components/Menu/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MenuHeader/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Home/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Home/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +34,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="homework-3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="homework-4" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="manhetan" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="pokemon-game" />
+  </component>
   <component name="ProjectId" id="1pX6fZjXo5pjvbqG56OSvbBynld" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,8 +67,42 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.eject" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -49,6 +114,10 @@
       <updated>1615317194347</updated>
       <workItem from="1615317199268" duration="76000" />
       <workItem from="1615399505372" duration="17784000" />
+      <workItem from="1615828433062" duration="8090000" />
+      <workItem from="1615843344853" duration="4286000" />
+      <workItem from="1615875677141" duration="1367000" />
+      <workItem from="1615892320099" duration="11550000" />
     </task>
     <task id="LOCAL-00001" summary="PG HW3 Commit">
       <created>1615683952829</created>
@@ -57,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615683952829</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PG HW3 Commit">
+      <created>1615684212287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615684212287</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,7 +144,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="homework-4" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
