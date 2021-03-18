@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import s from './style.module.css';
 
-const NavBar = ({isActive, onClickButton}) => {
+const NavBar = ({isActive, bgActive=false,onClickButton}) => {
     const handleClick = (event)=>{
         onClickButton && onClickButton();
     }

@@ -1,10 +1,9 @@
-import cn from 'classnames';
 import Menu from "../Menu";
 import NavBar from "../NavBar";
 import { useState } from 'react';
 
 //PR HW4
-const MenuHeader = () => {
+const MenuHeader = ({bgActive}) => {
     const [isActive, setActive] = useState(null);
 
     const handleClickButton = () => {
@@ -22,8 +21,9 @@ const MenuHeader = () => {
                 onClickButton={handleClickButton}
             />
             <NavBar
-                 isActive={isActive}
-                 onClickButton={handleClickButton}
+                isActive={isActive}
+                bgActive={bgActive}
+                onClickButton={handleClickButton}
             />
         </div>
     );
