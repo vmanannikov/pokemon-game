@@ -1,5 +1,6 @@
 import {useHistory} from 'react-router-dom';
-import s from "../Home/style.module.css";
+import {useState} from 'react';
+import s from "../Game/style.module.css";
 import PokemonCard from "../../components/PokemonCard";
 
 const POKEMONS = [
@@ -137,32 +138,60 @@ const POKEMONS = [
     }
 ];
 
-const GamePage = ({onChangePage}) => {
+const GamePage = () => {
     const history = useHistory();
+    const [pokemons, setPokemons] = useState(
+        POKEMONS.map(item => {
+            return Object.assign({}, item);
+        })
+    );
+
+    const [resArr, setArr] = useState(POKEMONS);
+
+    const handleClickActiveCard = (id) => {
+        console.log('####: inputId', id);
+        const res = pokemons.map(item => {
+            if(item.id === id){
+                item["active"] = true;
+            } else {
+                item["active"] = false;
+            }
+            return item;
+        });
+        setArr(res);
+        console.log('####: res', res);
+    };
+
+
+    console.log('####: POKEMONS', POKEMONS);
+    console.log('####: pokemons', pokemons);
 
     const handleClickButton = () =>{
         history.push('/');
     }
 
     return (
-        <div>
-            This is Game Page!
-            <button onClick={handleClickButton}>
-                Back to Home Page!
-            </button>
-            <div className={s.flex}>
-                {
-                    POKEMONS.map(item => <PokemonCard
-                        key={item.id}
-                        name={item.name}
-                        img={item.img}
-                        id={item.id}
-                        type={item.type}
-                        values={item.values}
-                    />)
-                }
+        <>
+            <div>
+                <div className={s.container}>
+                    <button className={s.button} onClick={handleClickButton}>Back to Home Page!</button>
+                </div>
+                <div className={s.flex}>
+                    {
+                        resArr.map((item) => <PokemonCard
+                            key={item.id}
+                            name={item.name}
+                            img={item.img}
+                            id={item.id}
+                            type={item.type}
+                            values={item.values}
+                            isActive={item.active}
+                            onClickCard={handleClickActiveCard}
+                        />)
+                    }
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

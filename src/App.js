@@ -15,7 +15,6 @@ const App = () =>{
     return (
             <Switch>
                 <Route path="/404" component={NotFound}/>
-                }} />
                 <Route>
                     <>
                         <MenuHeader bgActive={!match.isExact}/>

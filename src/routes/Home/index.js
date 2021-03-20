@@ -1,9 +1,7 @@
 import Header from "../../components/Header";
 import Layout from "../../components/Layout";
-import Footer from "../../components/Footer";
 
 import imgThree from '../../assets/bg3.jpg';
-import MenuHeader from "../../components/MenuHeader";
 
 const HomePage = ({onChangePage}) => {
     const handleClickButton = (page) =>{
@@ -11,7 +9,6 @@ const HomePage = ({onChangePage}) => {
     }
     return (
         <>
-            <MenuHeader/>
             <Header
                 title="Pokemon Game"
                 descr="This is new card game"
@@ -25,7 +22,6 @@ const HomePage = ({onChangePage}) => {
                 <p>In the game two players face off against one another, one side playing as "blue", the other as "red" on a 3x3 grid.</p>
                 <p>Each player has five cards in a hand and the aim is to capture the opponent's cards by turning them into the player's own color of red or blue.</p>
             </Layout>
-            <Footer />
         </>
     );
 }

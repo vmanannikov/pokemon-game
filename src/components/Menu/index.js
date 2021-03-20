@@ -21,27 +21,30 @@ const MENU = [
     },
 ]
 
-const Menu = ({isActive, onClickButton}) =>{
+const Menu = ({isOpen, onClickButton}) =>{
     const handleClick = ()=>{
         onClickButton && onClickButton();
     }
-
+    console.log('####: isOpen', isOpen);
     return (
-        <div className={cn(s.menuContainer, {[s.active]: isActive, [s.deactive]:!isActive})}>
+        <div className={cn(s.menuContainer, {
+            [s.active]: isOpen === true,
+            [s.deactive]: isOpen === false
+        })}>
             <div className={s.overlay}/>
-            <div className={s.menuItems} onClick={handleClick}>
-                <ul>
-                    {
-                        MENU.map(({title, to}, index)=>(
-                            <li key={index}>
-                                <Link to={to}>
-                                    {title}
-                                </Link>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
+                <div className={s.menuItems} onClick={handleClick}>
+                    <ul>
+                        {
+                            MENU.map(({title, to}, index)=>(
+                                <li key={index}>
+                                    <Link to={to}>
+                                        {title}
+                                    </Link>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
         </div>
     );
 };

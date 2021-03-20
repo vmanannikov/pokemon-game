@@ -2,30 +2,22 @@ import Menu from "../Menu";
 import NavBar from "../NavBar";
 import { useState } from 'react';
 
-//PR HW4
-const MenuHeader = ({bgActive}) => {
-    const [isActive, setActive] = useState(null);
+const MenuHeader = ({ bgActive }) => {
+    const [isOpen, setOpen] = useState(null);
 
     const handleClickButton = () => {
-        if(isActive === null){
-            setActive(true);
-        } else {
-            setActive(!isActive)
-        }
+        setOpen(prevState => !prevState);
     }
 
     return (
-        <div>
-            <Menu
-                isActive={isActive}
-                onClickButton={handleClickButton}
-            />
+        <>
+            <Menu isOpen={isOpen} onClickButton={handleClickButton}/>
             <NavBar
-                isActive={isActive}
+                isOpen={isOpen}
                 bgActive={bgActive}
                 onClickButton={handleClickButton}
             />
-        </div>
+        </>
     );
 };
 

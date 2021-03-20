@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4af02b9f-944d-4fc3-8de8-f118cf354147" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/routes/About/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/Contact/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/NotFound/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Menu/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MenuHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MenuHeader/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NavBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/index.js" afterDir="false" />
@@ -134,6 +130,7 @@
       <workItem from="1615892320099" duration="13290000" />
       <workItem from="1615987051961" duration="15182000" />
       <workItem from="1616053564998" duration="10235000" />
+      <workItem from="1616236261217" duration="30084000" />
     </task>
     <task id="LOCAL-00001" summary="PG HW3 Commit">
       <created>1615683952829</created>

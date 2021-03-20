@@ -136,6 +136,7 @@
     color: #fafafa;
     line-height: 32px;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 649px) {
@@ -184,6 +185,9 @@ button:visited {
     color: #fafafa;
     font-weight: bold;
     outline: none;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 button:hover {
