@@ -4,37 +4,14 @@ import database from "../../service/firebase";
 import s from "../Game/style.module.css";
 import PokemonCard from "../../components/PokemonCard";
 
-const DATA = {
-    "abilities": [
-        "keen-eye",
-        "tangled-feet",
-        "big-pecks"
-    ],
-    "stats": {
-        "hp": 63,
-        "attack": 60,
-        "defense": 55,
-        "special-attack": 50,
-        "special-defense": 50,
-        "speed": 71
-    },
-    "type": "flying",
-    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png",
-    "name": "pidgeotto",
-    "base_experience": 122,
-    "height": 11,
-    "id": 17,
-    "values": {
-        "top": "A",
-        "right": 2,
-        "bottom": 7,
-        "left": 5
-    }
-};
-
 const GamePage = () => {
     const history = useHistory();
     const [pokemons, setPokemons] = useState({});
+
+    const setRandomId = () =>{
+        const keyId = Math.random();
+        return keyId;
+    }
 
     const getPokemons = () =>{
         database.ref('pokemons').once('value', (snapshot) =>{
@@ -50,7 +27,7 @@ const GamePage = () => {
         setPokemons(prevState => {
             return Object.entries(prevState).reduce((acc, item) => {
                 const pokemon = {...item[1]};
-                if (pokemon.id === id) {
+                if (item[0] === key) {
                     pokemon.active = !pokemon.active;
                 };
 
@@ -63,22 +40,25 @@ const GamePage = () => {
         });
     };
 
-    const handleClickButton = () =>{
-        history.push('/');
-    }
-
     const handleAddPokemon = () =>{
-        const data = DATA;
+        const Obj = pokemons;
+        console.log('####: Obj', Obj);
+
+        const Keys = Object.keys(pokemons);
+        console.log('####: Keys', Keys);
+
         const newKey = database.ref().child('pokemons').push().key;
-        database.ref('pokemons/'+ newKey).set(data).then(() => getPokemons());
+        console.log('####: newKey', newKey);
+
+        database.ref('pokemons/' + newKey).set(Obj[Keys[Keys.length - 1]]);
+        getPokemons();
     }
 
     return (
         <>
             <div>
                 <div className={s.container}>
-                    <button className={s.button} onClick={handleClickButton}>Back to Home Page!</button>
-                    <button className={s.button} onClick={handleAddPokemon}>Add new Pokemon!</button>
+                    <button className={s.button} onClick={handleAddPokemon}>ADD NEW POKEMON!</button>
                 </div>
                 <div className={s.flex}>
                     {
