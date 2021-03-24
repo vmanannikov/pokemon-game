@@ -1,13 +1,15 @@
 import {useHistory} from 'react-router-dom';
 import {useState, useEffect, useContext} from 'react';
-import database, {fire} from "../../../../service/firebase";
 import s from "./style.module.css";
 import PokemonCard from "../../../../components/PokemonCard";
 import {FireBaseContext} from "../../../../context/firebaseContext";
+import {PokemonContext} from "../../../../context/pokemonContext";
 
 const StartPage = () => {
-    const firebase = useContext(FireBaseContext);
     const history = useHistory();
+    const firebase = useContext(FireBaseContext);
+    const pokemonsContext = useContext(PokemonContext);
+
     const [pokemons, setPokemons] = useState({});
 
     const getPokemons = async () =>{
@@ -22,36 +24,31 @@ const StartPage = () => {
         return () => firebase.offPokemonSocket();
     }, []);
 
-    const handleActiveCard = (key, id) => {
-        setPokemons(prevState => {
-            return Object.entries(prevState).reduce((acc, item) => {
-                const pokemon = {...item[1]};
-                if (item[0] === key) {
-                    pokemon.active = !pokemon.active;
-                };
+    const handleChangeSelected = (key) => {
+        const pokemon = {...pokemons[key]};
+        pokemonsContext.onSelectedPokemons(key, pokemon);
+        setPokemons(prevState => ({
+            ...prevState,
+            [key]: {
+                ...prevState[key],
+                selected: !prevState[key].selected,
+            }
+        }))
+    }
 
-                firebase.postPokemon(item[0], pokemon);
-
-                acc[item[0]] = pokemon;
-
-                return acc;
-            }, {});
-        });
-    };
-
-    const handleAddPokemon = () =>{
-        const Obj = pokemons;
-        console.log('####: Obj', Obj);
-
-        firebase.addPokemon(Obj, async () => {
-            await getPokemons();
-        })
+    const handleStartGameClick = () => {
+        history.push('game/board');
     }
 
     return (
         <>
             <div className={s.buttonWrap}>
-                <button>ADD NEW POKEMON!</button>
+                <button
+                    onClick={handleStartGameClick}
+                    disabled={Object.keys(pokemonsContext.pokemons.length < 5)}
+                >
+                    Start Game
+                </button>
             </div>
             <div className={s.flex}>
                 {
@@ -66,7 +63,11 @@ const StartPage = () => {
                             values={values}
                             isActive={true}
                             isSelected={selected}
-                            onClickCard={handleActiveCard}
+                            onClickCard={() => {
+                                if(Object.keys(pokemonsContext.pokemons).length < 5 || selected) {
+                                    handleChangeSelected(key)
+                                }
+                            }}
                         />)
                 }
             </div>

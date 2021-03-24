@@ -28,8 +28,8 @@ class FireBase {
         })
     };
 
-    offPokemonSocket = (cb) =>{
-        this.database.ref('pokemons').off();
+    offPokemonSocket = () =>{
+        this.database.ref('pokemons').off()
     };
 
     getPokemonsOnce = async () => {
@@ -41,18 +41,8 @@ class FireBase {
     }
 
     addPokemon = (data, cb) => {
-        const Obj = data;
-        console.log('####: Obj', Obj);
-
-        const Keys = Object.keys(data);
-        console.log('####: Keys', Keys);
-
-        const newKey = this.database.ref().child('pokemons').push().key;
-        console.log('####: newKey', newKey);
-
-        this.database.ref('pokemons/' + newKey).set(Obj[Keys[Keys.length - 1]]).then(
-            () => cb()
-        );
+            const newKey = this.database.ref().child('pokemons').push().key;
+            this.database.ref('pokemons/' + newKey).set(data).then(() => cb && cb());
     }
 }
 

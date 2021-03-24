@@ -1,11 +1,11 @@
 .flex {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 40px;
+    grid-gap: 60px;
 }
 
 .buttonWrap {
-    text-align: center;
+    /*text-align: center;*/
     padding: 2rem;
 }
 

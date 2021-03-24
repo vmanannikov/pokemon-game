@@ -32,7 +32,7 @@ const Menu = ({isOpen, onClickButton}) =>{
             [s.deactive]: isOpen === false
         })}>
             <div className={s.overlay}/>
-                <div className={s.menuItems} onClick={handleClick}>
+            <div className={s.menuItems} onClick={handleClick}>
                     <ul>
                         {
                             MENU.map(({title, to}, index)=>(

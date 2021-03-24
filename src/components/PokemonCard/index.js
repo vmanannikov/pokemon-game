@@ -1,14 +1,8 @@
 import s from './style.module.css';
 import cn from 'classnames';
 
-const PokemonCard = ({className, name, img, id, type, values, minimize, isActive, onClickCard, isSelected}) => {
-    console.log('####: active', isActive);
-    console.log('####: name', name);
-    console.log('####: values', values);
-    console.log('####: minimize', minimize);
-    console.log('####: className', className);
-
-    const handleClick = () =>{
+const PokemonCard = ({className, name, img, id, type, values, minimize, isActive, isSelected, onClickCard}) => {
+    const handleClickCard = () =>{
         onClickCard && onClickCard(id);
     }
 
@@ -17,7 +11,7 @@ const PokemonCard = ({className, name, img, id, type, values, minimize, isActive
             [s.active]: isActive,
             [s.selected]: isSelected,
         })}
-        onClick={handleClick}
+        onClick={handleClickCard}
         >
             <div className={s.cardFront}>
                 <div className={cn(s.wrap, s.front)}>
@@ -36,7 +30,7 @@ const PokemonCard = ({className, name, img, id, type, values, minimize, isActive
                             <h3 className={s.name}>
                                 {name}
                             </h3>
-                            <small className={s.type}>
+                            <small className={s[type]}>
                                 Type: <span>{type}</span>
                             </small>
                         </div>) }
