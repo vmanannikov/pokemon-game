@@ -7,6 +7,7 @@ const PokemonCard = ({className, name, img, id, type, values, minimize, isActive
     }
 
     //console.log('####: className', className);
+    console.log('####: PCid', id);
 
     return (
         <div className={cn(className, s.pokemonCard, {

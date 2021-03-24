@@ -36,7 +36,7 @@ const StartPage = () => {
     }
 
     const handleStartGameClick = () => {
-        history.push('game/board');
+        history.push('/game/board');
     }
 
     return (
@@ -44,7 +44,7 @@ const StartPage = () => {
             <div className={s.buttonWrap}>
                 <button
                     onClick={handleStartGameClick}
-                    //disabled={Object.keys(Object.keys(pokemonsContext.pokemons).length < 5)}
+                    disabled={Object.keys(pokemonsContext.pokemons).length < 5}
                 >
                     Start Game
                 </button>

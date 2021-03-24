@@ -7,6 +7,8 @@ const BoardPage = () => {
     const { pokemons } = useContext(PokemonContext);
     console.log('####: pokemonContext', pokemons);
 
+    console.log('####: Object.values', Object.values(pokemons));
+
     return (
         <div className={s.root}>
             <div className={s.playerOne}>
