@@ -5,6 +5,8 @@ import PokemonCard from "../../../../components/PokemonCard";
 
 const BoardPage = () => {
     const { pokemons } = useContext(PokemonContext);
+    console.log('####: pokemonContext', pokemons);
+
     return (
         <div className={s.root}>
             <div className={s.playerOne}>

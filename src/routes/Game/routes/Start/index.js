@@ -1,6 +1,6 @@
 import {useHistory} from 'react-router-dom';
 import {useState, useEffect, useContext} from 'react';
-import s from "./style.module.css";
+import s from "./../Start/style.module.css";
 import PokemonCard from "../../../../components/PokemonCard";
 import {FireBaseContext} from "../../../../context/firebaseContext";
 import {PokemonContext} from "../../../../context/pokemonContext";
@@ -10,12 +10,11 @@ const StartPage = () => {
     const firebase = useContext(FireBaseContext);
     const pokemonsContext = useContext(PokemonContext);
 
+    console.log('####: pokemonsContext', pokemonsContext);
+
     const [pokemons, setPokemons] = useState({});
 
-    const getPokemons = async () =>{
-        const response = await firebase.getPokemonsOnce();
-        setPokemons(response);
-    }
+    console.log('####: pokemons', pokemons);
 
     useEffect(() => {
         firebase.getPokemonSocket((pokemons) => {
@@ -45,7 +44,7 @@ const StartPage = () => {
             <div className={s.buttonWrap}>
                 <button
                     onClick={handleStartGameClick}
-                    disabled={Object.keys(pokemonsContext.pokemons.length < 5)}
+                    //disabled={Object.keys(Object.keys(pokemonsContext.pokemons).length < 5)}
                 >
                     Start Game
                 </button>

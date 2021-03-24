@@ -10,6 +10,8 @@ const GamePage = () => {
     const [selectedPokemons, setSelectedPokemons] = useState({});
     const match = useRouteMatch();
 
+    console.log('####: selectedPokemons', selectedPokemons);
+
     const handleSelectedPokemons = (key, pokemon) => {
         setSelectedPokemons(prevState => {
             if(prevState[key]){

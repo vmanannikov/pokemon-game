@@ -6,6 +6,8 @@ const PokemonCard = ({className, name, img, id, type, values, minimize, isActive
         onClickCard && onClickCard(id);
     }
 
+    //console.log('####: className', className);
+
     return (
         <div className={cn(className, s.pokemonCard, {
             [s.active]: isActive,
