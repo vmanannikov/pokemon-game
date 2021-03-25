@@ -3,12 +3,13 @@ import cn from 'classnames';
 
 import cardBackSide from './assets/card-back-side.jpeg';
 
-const PokemonCard = ({name, img, id, type, values, isActive, onClickCard}) => {
+const PokemonCard = ({keyId, name, img, id, type, values, isActive, onClickCard}) => {
     console.log('####: active', isActive);
     console.log('####: name', name);
+    console.log('####: values', values);
 
     const handleClick = () =>{
-        onClickCard && onClickCard(id);
+        onClickCard && onClickCard(keyId, id);
     }
 
     return (
